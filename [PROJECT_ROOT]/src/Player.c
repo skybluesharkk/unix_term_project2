@@ -46,6 +46,9 @@ int main(){
 					_cur_node = _cur_node->next;
 				}
 				break;
+			case 'play':
+				printf("%s"is now playing!,_cur_node->data);
+				break;
 		}
 	}
 }
