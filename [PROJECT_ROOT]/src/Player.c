@@ -17,6 +17,7 @@ int main(){
 
 	scanf("%d", &b);
 	for (int j=0;j<b;j++){
+		int c;		
 		char ch;
 		scanf("%c", &ch);
 		switch (ch){
@@ -38,6 +39,12 @@ int main(){
 				break;
 			case 'prev':
 				prev();
+				break;
+			case 'move':
+				scanf("%d", &c);
+				for (int k=0;k<c;k++){
+					_cur_node = _cur_node->next;
+				}
 				break;
 		}
 	}
