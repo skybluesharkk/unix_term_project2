@@ -60,6 +60,11 @@ int main(){
 				}
 				printf("LinkedList is cleared!\nquit!");
 				break;
+			case 'load':
+				char temp;
+				scanf("%c",&temp);
+				read_file(temp);
+				break;
 		}
 	}
 }
