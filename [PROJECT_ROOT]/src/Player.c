@@ -53,6 +53,13 @@ int main(){
 				clear();
 				printf("LinkedList is cleared!");
 				break;
+			case 'quit':
+				_cur_node = first_node;
+				while(_cur_node !=NULL){
+					delete_node();
+				}
+				printf("LinkedList is cleared!\nquit!");
+				break;
 		}
 	}
 }
