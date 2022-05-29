@@ -33,6 +33,9 @@ int main(){
 			case 'list':
 				print();
 				break;
+			case 'next':
+				next();
+				break;
 		}
 	}
 }
