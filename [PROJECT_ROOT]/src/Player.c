@@ -30,6 +30,9 @@ int main(){
 				scanf("%s",title);
 				delete(title);
 				break;
+			case 'list':
+				print();
+				break;
 		}
 	}
 }
