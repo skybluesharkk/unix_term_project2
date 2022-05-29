@@ -49,6 +49,10 @@ int main(){
 			case 'play':
 				printf("%s"is now playing!,_cur_node->data);
 				break;
+			case 'clear':
+				clear();
+				printf("LinkedList is cleared!");
+				break;
 		}
 	}
 }
