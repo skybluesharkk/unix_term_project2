@@ -18,11 +18,17 @@ int main(){
 	scanf("%d", &b);
 	for (int j=0;j<b;j++){
 		char ch;
-		char title[100];
 		scanf("%c", &ch);
 		switch (ch){
 			case 'add':
+				char title[100];
+				scanf("%s",title);
 				append_left(100, title);
+				break;
+			case 'del':
+				char title[100];
+				scanf("%s",title);
+				delete(title);
 				break;
 		}
 	}
