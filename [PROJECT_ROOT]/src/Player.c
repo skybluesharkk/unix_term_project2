@@ -36,6 +36,9 @@ int main(){
 			case 'next':
 				next();
 				break;
+			case 'prev':
+				prev();
+				break;
 		}
 	}
 }
