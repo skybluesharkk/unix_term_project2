@@ -24,8 +24,6 @@ bool empty(){
 	return_head == NULL;
 }
 
-
-
 size_t size(){
 	size_t count = 0;
 	Node *now = _head;
