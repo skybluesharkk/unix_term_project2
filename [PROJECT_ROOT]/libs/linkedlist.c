@@ -78,7 +78,7 @@ void clear(){
 
 Node* append_left(size_t n, char new_data[n]){
 	Node* new = (Node *)malloc(sizeof(Node));
-	new->data = new_data
+	new->data = new_data;
 	insert_after(_head,new);
 }
 
@@ -98,7 +98,7 @@ Node* append(size_t n, char new_data[n]){
 		init();
 	Node* new = (Node *)malloc(sizeof(Node));
 	new->data = new_data;
-	insert_after(_tail->prev,new)
+	insert_after(_tail->prev,new);
 }
 
 Node* _insert_after(Node* cur_node, size_t n, char new_data[]){
@@ -152,23 +152,15 @@ Node* prev(){
 }
 
 Node* first_node(){
-	if(size() > 0)
-		return _head->next;
-	else
-		return _tail;
+	return _head;
 }
 
 Node* last_node(){
-	if(size() > 0)
-		return _tail->prev;
-	else
-		return _tail;
+	return _tail;
 }
 
 Node* get_node(size_t index){
 	int count = 0;
-	if(size() - 1 < index)
-		return NULL;
 
 	Node *now = _head;
 	while(count != index){
