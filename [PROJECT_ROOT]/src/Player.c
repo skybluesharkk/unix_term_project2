@@ -63,3 +63,30 @@ int main(){
 		}
 	}
 }
+
+int __commands(char ch[]){
+	if (strcmp(ch, "add")==0)
+		return 1;
+	else if (strcmp(ch,"del")==0)
+		return 2;
+	else if (strcmp(ch,"list")==0)
+		return 3;
+	else if (strcmp(ch,"next")==0)
+		return 4;
+	else if (strcmp(ch,"prev")==0)
+		return 5;
+	else if (strcmp(ch,"move")==0)
+		return 6;
+	else if (strcmp(ch,"play")==0)
+		return 7;
+	else if (strcmp(ch,"clear")==0)
+		return 8;
+	else if (strcmp(ch,"quit")==0)
+		return 9;
+	else if (strcmp(ch,"load")==0)
+		return 10;
+	else if (strcmp(ch,"save")==0)
+		return 11;
+	else 
+		return 12;
+}
