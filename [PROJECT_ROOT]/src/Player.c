@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
+#include <stddef.h>
 //#include "node.h"
 //#include "linkedlist.h"
 //#include "textfilewriter.h"
@@ -9,61 +11,54 @@ int main(){
 	
 	int a,b;
 	scanf("%d", &a);
-	char new_data[100];
+	char _tmp_data[100];
+	char new_data[10][100];
+	append(100,_tmp_data);
 	for (int i=0;i<a;i++){
-		scanf("%s", new_data);
-		append(100, new_data);
+		scanf("%s", new_data[a-i-1]);
+		append_left(100, new_data[a-i-1]);
 	}
 
 	scanf("%d", &b);
 	for (int j=0;j<b;j++){
-		int c;		
-		char ch;
-		scanf("%c", &ch);
-		switch (ch){
-			case 'add':
+				
+		char ch[30];
+		scanf("%s", &ch);
+		__commands(ch);
+		Node* s = _cur_node;
+		switch(__cur_node (ch)){
+			case 1:{
 				char title[100];
 				scanf("%s",title);
 				append_left(100, title);
 				break;
-			case 'del':
-				char title[100];
-				scanf("%s",title);
-				delete(title);
-				break;
-			case 'list':
-				print();
-				break;
-			case 'next':
-				next();
-				break;
-			case 'prev':
-				prev();
-				break;
-			case 'move':
-				scanf("%d", &c);
-				for (int k=0;k<c;k++){
-					_cur_node = _cur_node->next;
+			       }
+			case 2:
+				printf("this is commands del 2\n");	
+			        break;
+			case 3:{
+				Node *tmp;
+				tmp = _head->next;
+				printf("LinkedList [");
+				while (tmp->next!=_tail){
+					printf("%s", tmp->data);
+					tmp = tmp->next;
 				}
+				printf("]\n");
 				break;
-			case 'play':
-				printf("%s"is now playing!,_cur_node->data);
+			       }
+			case 4:
+			       {
+			       	next();
 				break;
-			case 'clear':
-				clear();
-				printf("LinkedList is cleared!");
+			       }
+			case 7:{
+				printf("%s", s->next->data);
+				printf(" is now playing!");
 				break;
-			case 'quit':
-				_cur_node = first_node;
-				while(_cur_node !=NULL){
-					delete_node();
-				}
-				printf("LinkedList is cleared!\nquit!");
-				break;
-			case 'load':
-				char temp;
-				scanf("%c",&temp);
-				read_file(temp);
+			       }
+			case 12:
+			       printf("It is the wrong command. \n");
 				break;
 		}
 	}
