@@ -39,9 +39,9 @@ int main(){
 			case 3:{
 				Node *tmp;
 				tmp = _head->next;
-				printf("LinkedList [");
+				printf("LinkedList [ ");
 				while (tmp->next!=_tail){
-					printf("%s", tmp->data);
+					printf("%s ", tmp->data);
 					tmp = tmp->next;
 				}
 				printf("]\n");
