@@ -26,7 +26,7 @@ int main(){
 		scanf("%s", &ch);
 		__commands(ch);
 		Node* s = _cur_node;
-		switch(__cur_node (ch)){
+		switch(__commands(ch)){
 			case 1:{
 				char title[100];
 				scanf("%s",title);
