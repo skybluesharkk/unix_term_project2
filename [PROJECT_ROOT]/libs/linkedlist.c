@@ -23,7 +23,7 @@ void init(){
 }
 
 bool empty(){
-	return_head == NULL;
+	return _head == NULL;
 }
 
 size_t size(){
@@ -58,7 +58,7 @@ void print_file(FILE* stream){
 }
 
 void clear(){
-	Node* now = Null;
+	Node* now = NULL;
 	if(empty())
 		return;
 	
@@ -76,12 +76,6 @@ void clear(){
 	_cur_node = NULL;
 }
 
-Node* append_left(size_t n, char new_data[n]){
-	Node* new = (Node *)malloc(sizeof(Node));
-	new->data = new_data;
-	insert_after(_head,new);
-}
-
 Node* insert_after(Node* cur_node, Node* new_node){
 	if(cur_node == _tail)
 		return new_node;
@@ -91,6 +85,11 @@ Node* insert_after(Node* cur_node, Node* new_node){
 	new_node->next->prev = new_node;
 
 	return new_node;
+}
+Node* append_left(size_t n, char new_data[n]){
+	Node* new = (Node *)malloc(sizeof(Node));
+	new->data = new_data;
+	insert_after(_head,new);
 }
 
 Node* append(size_t n, char new_data[n]){
