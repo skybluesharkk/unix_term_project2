@@ -164,7 +164,7 @@ Node* get_node(size_t index){
 	Node *now = _head;
 	while(count != index){
 		now = now->next;
-		count++
+		count++;
 	}
 	return now;
 }
